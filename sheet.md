@@ -1,35 +1,56 @@
 # Hands-on Introduction to Self-Hosting with YunoHost
 
+
 ## Setting up your first YunoHost server
 
 This tutorial is somehow similar to what you would find in the official documentation on `https://yunohost.org/install`.
 
-### Access your server
+### Access your server with
 
-1. **Open a terminal**.
-    - If you run Linux or MacOS, you should find this in the various accessories provided on your system.
-    - If you are on Windows, you might want to download *MobaXterm* somewhere on the internet.
+#### Linux and MacOS Users
 
+1. Find and open the terminal software
 1. **SSH in your server**. Using the IP address provided to you, run the following command in your terminal : 
 ```
 ssh root@11.22.33.44
 ```
 (replacing the number with your IP address).
 
-On Windows, create a new Session (type: SSH), input your IP in 'Hostname' and `root` as Username.
-The system will ask you to check the server fingerprint to confirm its identity (usually people just type 'yes' though it's a bad security practice :/). Then you should enter the password `iloveyunohost`. Then you should see some ascii art popping up, as well as technical info, and a new command prompt like : `root@<some_name>:~# _`. You are now controlling your server through command line !
+
+#### Windows Users
+
+1. Download *MobaXterm* somewhere on the internet and install it.
+
+1. Create a new session (type: SSH) with
+    - `Hostname`: `11.22.33.44` (replace with your provided IP address)
+    - Set `Username` to **root**
+
+1. The system will ask you to check the server fingerprint to confirm its identity (usually people just type 'yes' though it's a bad security practice :/).
+
+1. Then you should enter the password `iloveyunohost`. Then you should see some ascii art popping up, as well as technical info, and a new command prompt like : `root@<some_name>:~# _`. You are now controlling your server through command line !
+
 
 ### Install yunohost 
 
-- 2 - **Let's run YunoHost's installation script**. For various reasons (please trust the teacher ;)), we will setup a *testing* instance ! (Though this is slightly more complicated than the regular version). Enter the three following command carefully :
+**Let's run YunoHost's installation script**. For various reasons (please trust the teacher ;)), we will setup a instance of testing version ! (Though this is slightly more complicated than the regular version).
+    
+1. To download and prepare the installation script, enter the two following commands carefully :
 ```
 # wget https://install.yunohost.org -O install_script
 # chmod +x install_script
+```
+
+1. Now launch this command which effectively launches the installation and will take a few minutes. You might have to **agree** with a few disclaimers :
+```
 # ./install_script -d testing
 ```
-The last command effectively launches the installation and will take a few minutes. You might have to agree with a few disclaimers.
 
-- 3 - After the install finishes, **test with your web browser** that you can now effectively access your server. This is done by accessing `https://11.22.33.44/` (again, replacing the numbers with your IP address). You will encounter a spooky warning about the certificate not being trusted - which is to be expected for now ! Ask your browser to add an exception about this certificate. After this, you can proceed with the postinstallation.
+1. After the install finishes, **test with your web browser** that you can now effectively access your server.
+    - Access `https://11.22.33.44/` (again, replacing the numbers with your IP address).
+    - You will encounter a spooky warning about the certificate not being trustable - which is to be expected for now !
+    - Ask your browser to add an exception about this certificate.
+    
+After this, you can proceed with the **postinstallation**.
 
 ### Basic configuration
 
