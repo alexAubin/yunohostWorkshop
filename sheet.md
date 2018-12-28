@@ -1,17 +1,25 @@
-# Intro to Self-Hosting with YunoHost
+# Hands-on Introduction to Self-Hosting with YunoHost
 
 ## Setting up your first YunoHost server
 
-Similar to what you would find in the official doc on `https://yunohost.org/install`.
+This tutorial is somehow similar to what you would find in the official documentation on `https://yunohost.org/install`.
 
-- 0 - **Open a terminal**. If you run Linux or MacOS, you should find this in the various accessories provided on your system. If you are on Windows, you might want to download MobaXterm somewhere on the internet.
+### Access your server
 
-- 1 - **SSH in your server**. Using the IP address provided to you, run the following command in your terminal : 
+1. **Open a terminal**.
+    - If you run Linux or MacOS, you should find this in the various accessories provided on your system.
+    - If you are on Windows, you might want to download *MobaXterm* somewhere on the internet.
+
+1. **SSH in your server**. Using the IP address provided to you, run the following command in your terminal : 
 ```
 ssh root@11.22.33.44
 ```
-(replacing the number with your IP address). On Windows, create a new Session (type: SSH), input your IP in 'Hostname' and `root` as Username.
+(replacing the number with your IP address).
+
+On Windows, create a new Session (type: SSH), input your IP in 'Hostname' and `root` as Username.
 The system will ask you to check the server fingerprint to confirm its identity (usually people just type 'yes' though it's a bad security practice :/). Then you should enter the password `iloveyunohost`. Then you should see some ascii art popping up, as well as technical info, and a new command prompt like : `root@<some_name>:~# _`. You are now controlling your server through command line !
+
+### Install yunohost 
 
 - 2 - **Let's run YunoHost's installation script**. For various reasons (please trust the teacher ;)), we will setup a *testing* instance ! (Though this is slightly more complicated than the regular version). Enter the three following command carefully :
 ```
@@ -22,6 +30,8 @@ The system will ask you to check the server fingerprint to confirm its identity 
 The last command effectively launches the installation and will take a few minutes. You might have to agree with a few disclaimers.
 
 - 3 - After the install finishes, **test with your web browser** that you can now effectively access your server. This is done by accessing `https://11.22.33.44/` (again, replacing the numbers with your IP address). You will encounter a spooky warning about the certificate not being trusted - which is to be expected for now ! Ask your browser to add an exception about this certificate. After this, you can proceed with the postinstallation.
+
+### Basic configuration
 
 - 4 - The **post-installation** corresponds to the initial configuration of your server. In this step, you will need to choose the main domain name of your server, and a decent administrator password. Regarding the domain name, in the context of this workshop, it is proposed to use free domain names from the `netlib.re` services. You can choose `anything.netlib.re` or `anything.codelib.re` (as long as it's not already used by anybody else). For now, just enter the domain name and we'll configure it "for real" on `netlib.re` after the postinstall is done. Once the postinstall is complete, you should end up on the home screen of the YunoHost web admin interface.
 
