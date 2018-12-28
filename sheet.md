@@ -1,22 +1,8 @@
-# Hands-on introduction to self-hosting with YunoHost
-
-## Recap' of technical notions
-
-- **Router**: devices that compose the basic infrastructure of the internet as they relay and route messages between machines
-- **Server**: a computer running 24/7 and answering requests to provide web pages, email inboxes or instant messages
-- **VPS**: a virtual private server, meaning a server running somewhere in a datacenter as a virtual machine. You can buy/rent such VPS on providers online like Scaleway or Digital Ocean (though there might be more ethical providers than those...)
-- **Global IP address**: an address composed of numbers, which identifies a machine on the internet and makes sense on the global scale. You can know your current global IP address on sites like whatsmyip.com or ip.yunohost.org.
-- **Local IP address**: an address composed of numbers, which indentifies a machine at the scale of a home network. This information setting up a server at home.
-- **Domain name**: a human-readable address composed of names, like `en.wikipedia.org`. This corresponds to a global IP address which in turns generally corresponds to a server.
-- **DNS**: the Domain Name System designates the infrastructure storing the relation between domain names and IP addresses, as well as other informations called DNS records.
-- **Port**: if IP addresses are like building addresses, then ports can be thought of as room number. Ports are complementary to IP addresses and allow programs to discuss with each other across the internet.
-- **Protocol**: a set of formal rules for programs to discuss with each other - much like we generally start conversation with "Hello, how are you ?", say "Please" and "Thank you". HTTP and HTTPS are some well-known protocols (done on port 80 and 443) as well as email (SMTP, IMAP).
-- **Command line interface**: a way to interact with computers by inputing successive text commands into a terminal to ask the system to perform tasks. While this is more technical than graphical interfaces, it is also arguably more efficient and lightweight in terms of ressources.
-- **SSH**: a protocol typically used to remote control servers via command line interface
+# Intro to Self-Hosting with YunoHost
 
 ## Setting up your first YunoHost server
 
-Similar to what you would find in the official doc on https://yunohost.org/install.
+Similar to what you would find in the official doc on `https://yunohost.org/install`.
 
 - 0 - **Open a terminal**. If you run Linux or MacOS, you should find this in the various accessories provided on your system. If you are on Windows, you might want to download MobaXterm somewhere on the internet.
 
@@ -25,17 +11,14 @@ Similar to what you would find in the official doc on https://yunohost.org/insta
 ssh root@11.22.33.44
 ```
 (replacing the number with your IP address). On Windows, create a new Session (type: SSH), input your IP in 'Hostname' and `root` as Username.
-
 The system will ask you to check the server fingerprint to confirm its identity (usually people just type 'yes' though it's a bad security practice :/). Then you should enter the password `iloveyunohost`. Then you should see some ascii art popping up, as well as technical info, and a new command prompt like : `root@<some_name>:~# _`. You are now controlling your server through command line !
 
 - 2 - **Let's run YunoHost's installation script**. For various reasons (please trust the teacher ;)), we will setup a *testing* instance ! (Though this is slightly more complicated than the regular version). Enter the three following command carefully :
-
 ```
 # wget https://install.yunohost.org -O install_script
 # chmod +x install_script
 # ./install_script -d testing
 ```
-
 The last command effectively launches the installation and will take a few minutes. You might have to agree with a few disclaimers.
 
 - 3 - After the install finishes, **test with your web browser** that you can now effectively access your server. This is done by accessing `https://11.22.33.44/` (again, replacing the numbers with your IP address). You will encounter a spooky warning about the certificate not being trusted - which is to be expected for now ! Ask your browser to add an exception about this certificate. After this, you can proceed with the postinstallation.
