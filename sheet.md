@@ -100,7 +100,7 @@ You can now control your server using this clean interface.
 1. The email address you enter here is **YOUR NEW email address** created using the email software of your yunohost server. So you can choose any email address ending with your domain name (for instance `me@yourdomain.nohost.me`)
     - You can choose a maximal size for the mail box or leave it empty, no to set any limit.
 
-1. At this end, choose a password (or passphrase) for the new user. It will be used to access the **User Interface** with your new user account.
+1. At this end, choose a password (or passphrase) for the new user. It's different to the administrator password and it will be used to access the **User Interface** with this new user account.
 
 You should now have one user in the list. Go back to the home section (tiny home icone).
 
@@ -111,15 +111,23 @@ We have to choose an app among the yunohost apps (around a hundred). **Nextcloud
 
 1. To install it, navigate the `Applications` section and click `Install`.
 
-1. Look for Nextcloud, typing `next` in the search field. and click `Install`.
+1. Look for Nextcloud, typing `next` in the search field. and click `+ Install`.
 
 1. Form now, in the following form, you can let each value to it's default. So just click the `install` button (we will go though this parameters later).
+
+1. You should now have the Nextcloud app in the app list.
 
 Tip: By default only official apps are available. If you want to access apps packaged by the community, you can enable the Community list by clicking `Manage applications lists`.
 
 ### Access Nextcloud through the user interface
 
-1. 
+1. Click the blue `user interface` button in the upper right corner (or type in your browser yourdomain.nohost.me/yunohost/sso).
+
+1. Login with the user nickname and password of the preceding step.
+
+1. Your now accessing the user interface of yunohost. All apps installed andaccessible to your user account are shown here as colored squared icons.
+
+1. Click the nextcloud icon. It will redirect you to the path configured during the installation 
 
 - 9 - **Test email features**. Either by configuring a desktop mail client like Thunderbird and configuring a new mail account in it (see `https://yunohost.org/email_configure_client`), or install the Rainloop app (a webmail client) on the server. As a goal : try to send and receive emails to other trainees around you !
 
