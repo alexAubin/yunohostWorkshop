@@ -8,22 +8,18 @@ class: impact
 
 # Introduction to Self‑Hosting with YunoHost
 
+## Workshop by Aleks & Elie
+
 ---
+
+# Goal
+
+- Discover the practice and possibilities of self-hosting with YunoHost
 
 # Disclaimer
 
-- This workshop was designed for beginner with little technical knowledge!
+- This workshop was designed for beginners with little technical knowledge!
 - Purists: sorry about the few technical shortcuts!
-
----
-
-# Contact
-
-- **Mastodon**: cybre.space/aleks
-- **GitHub**: github.com/alexAubin
-- **Matrix**: @Alekswag:matrix.org
-- **IRC**: Find me on #yunohost on irc.freenode.org
-- I also spend a lot on time on forum.yunohost.org
 
 ---
 
@@ -316,7 +312,7 @@ alternatively: « You (K)now Host »
 ---
 
 .center[
-**YunoHost: ecosystem**
+**YunoHost ecosystem**
 ![](img/ecosystem.png)
 ]
 
@@ -326,35 +322,13 @@ class: impact
 
 # Technical notions
 
----
-
-# Technical notions
-
-## Network
-
-- basic understanding of the architecture
-- global / local IP addresses
-- domain name
-- (ports, protocol)
-
-## System
-
-- what's a server
-- SSH (remote control)
-- basic command line usage
+.center[
+<small>You *don't need* to master all of these, <br>but having an idea of what is going on makes things easier</small>
+]
 
 ---
 
 # Technical notions
-
-## Disclaimer
-
-- You don't need to master all of these
-- It's mostly useful only during initial install
-
----
-
-# Technical notions: network
 
 ## Internet architecture
 
@@ -364,7 +338,72 @@ class: impact
 
 ---
 
-# Technical notions: network
+# Technical notions
+
+## Internet architecture
+
+.center[
+![](img/internet2.jpg)
+]
+
+---
+
+# Technical notions
+
+## Internet architecture
+
+.center[
+![](img/internet3.jpg)
+]
+
+---
+
+# Technical notions
+
+## Internet architecture
+
+.center[
+![](img/internet4.jpg)
+]
+
+---
+
+# Technical notions
+
+## Internet architecture
+
+.center[
+![](img/internet5.jpg)
+]
+
+---
+
+# Technical notions
+
+## Server <small>(in terms of hardware)</small>
+
+- A machine **dedicated to answering requests and serving stuff**
+   - web pages, mail inboxes, instant messaging, ...
+- **Typically available 24/7**, reachable on the Internets
+
+
+---
+
+# Technical notions
+
+## Global IP / Local IP
+
+- IP adresses are used to identify *machines*
+- **Global (or public) IP address** make sense on the "global" internet
+    - typically given by your ISP to your router
+    - ~shared by multiple devices
+- At home : **Local IP address** make sense only inside the local network
+    - typically looks like `192.168.x.y` or `10.0.x.y`
+    - (related to the lack of IPv4 ?)
+
+---
+
+# Technical notions
 
 ## Local network
 
@@ -374,21 +413,7 @@ class: impact
 
 ---
 
-# Technical notions: network
-
-## Global IP / Local IP
-
-- IP adresses are used to identify *machines*
-- **Global (or public) IP address** make sense on the "global" internet
-    - typically given by your ISP to your router
-    - ~shared by multiple devices
-- **Local IP address** make sense only inside a local network (e.g. @ home)
-    - typically looks like `192.168.x.y` or `10.0.x.y`
-    - (related to the lack of IPv4 ?)
-
----
-
-# Technical notions: network
+# Technical notions
 
 ## Domain name and DNS
 
@@ -398,7 +423,7 @@ class: impact
 
 ---
 
-# Technical notions: network
+# Technical notions
 
 ## Domain name and DNS
 
@@ -413,85 +438,14 @@ human-readable name <-> IP address
    - **buy domain names on DNS *registrars* **(ex: Gandi.net)
    - or get some for free (ex: netlib.re, nohost.me)
 
-
 ---
 
-# Technical notions: network
+# Technical notions
 
-## (Ports)
+## Remote control with SSH and command line
 
-- If IP adresses are like building adresses, **ports are like room numbers**
-- Ports are used to specify **which program to talk to**
-- ex:
-   - `127.0.0.1 : 72839` talking to  `91.198.174.192 : 443`
-   - your web browser <-----------------> wikipedia.org web server
-
----
-
-# Technical notions: network
-
-## (Protocols)
-
-- Rules used by programs to talk to each other
-    - *Hello, How are You?, Please, Thank you*
-- Most known:
-    - Web (HTTP, HTTPS): port 80 and 443
-    - Email (SMTP, IMAP): port 25, 587, 993
-
----
-
-# Technical notions: system
-
-## Server (hardware)
-
-- A machine dedicated to answering requests and serving stuff
-   - web pages, mail inboxes, instant messaging, ...
-- Typically on 24/7 and reachable on the internets
-
----
-
-# Technical notions: system
-
-## Command line interface
-
-- Interacting with the system through "written orders" rather than clicks
-- Happens in a terminal (or console)
-- More technical, but also more efficient on various aspects...
-
-```bash
-# List files in the current folder
-alex@shadow:~/dev/workshopYunohost$ ls -l
-total 28
-drwxr-xr-x 2 alex alex 4096 Dec 26 23:36 dist
--rw-r--r-- 1 alex alex 7391 Dec 28 03:32 fiche.md
-drwxr-xr-x 2 alex alex 4096 Dec 28 11:53 img
--rw-r--r-- 1 alex alex 7977 Dec 28 11:53 slides.md
-drwxr-xr-x 2 alex alex 4096 Dec 28 03:20 template
-```
-
----
-
-# Technical notions: system
-
-## Command line interface
-
-- Interacting with the system through "written orders" rather than clicks
-- Happens in a terminal (or console)
-- More technical, but also more efficient on various aspects...
-
-```bash
-# Convert a jpg image to png
-alex@shadow:~$ convert logo.jpg logo.png
-```
-
----
-
-# Technical notions: system
-
-## Remote control with SSH
-
-- Servers typically don't have graphical interface nor keyboards
-- and usually not in the same room anyway !
+- Servers typically **don't have graphical interface nor keyboards**
+- and usually you're not in the same room anyway !
 
 .center[
 -> need a way to remote control
@@ -499,12 +453,19 @@ alex@shadow:~$ convert logo.jpg logo.png
 
 ---
 
-# Technical notions: system
+# Technical notions
 
-## Remote control with SSH
+## Remote control with SSH and command line
 
-- SSH stands for Secure SHell and is a protocol (default on port 22)
-- Remote control with command line interface
+- **SSH** stands for Secure SHell and is a protocol (default on port 22)
+- **Remote control with command line interface**
+- **Command line interface** is interacting with the system through "**written orders**"
+
+---
+
+# Technical notions
+
+## Remote control with SSH and command line
 
 ```bash
 $ ssh root@11.22.33.44
@@ -515,12 +476,9 @@ Are you sure you want to continue connecting (yes/no)? █
 
 ---
 
-# Technical notions: system
+# Technical notions
 
-## Remote control with SSH
-
-- SSH stands for Secure SHell and is a protocol (default on port 22)
-- Remote control with command line interface
+## Remote control with SSH and command line
 
 ```bash
 $ ssh root@11.22.33.44
@@ -534,12 +492,9 @@ root@11.22.33.44's password:
 
 ---
 
-# Technical notions: system
+# Technical notions
 
-## Remote control with SSH
-
-- SSH stands for Secure SHell and is a protocol (default on port 22)
-- Remote control with command line interface
+## Remote control with SSH and command line
 
 ```bash
 $ ssh root@11.22.33.44
@@ -566,116 +521,90 @@ class: impact
 
 # Let's get to work !
 
-- Each of you will have **a VPS** (already bought them)
+1. Connect to your server
+    - Each of you will have **a VPS** <small>(already bought them)</small>
+    - With a terminal, **connect using SSH** to your server
 
 ---
 
 # Let's get to work !
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-
-
-
----
-
-# Let's get to work !
-
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
+1. Connect to your server
+    - Each of you will have **a VPS** <small>(already bought them)</small>
+    - With a terminal, **connect using SSH** to your server
+2. Install YunoHost 
+    - Launch **YunoHost's install script**
+    - Run the **postinstall** from the web admin interface
+        - you'll have to choose a **domain name** <small>(`something.nohost.me`)</small>
 
 ---
 
 # Let's get to work !
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
+1. Connect to your server
+    - Each of you will have **a VPS** <small>(already bought them)</small>
+    - With a terminal, **connect using SSH** to your server
+2. Install YunoHost 
+    - Launch **YunoHost's install script**
+    - Run the **postinstall** from the web admin interface
+        - you'll have to choose a **domain name** <small>(`something.nohost.me`)</small>
+3. Play with you server !
+    - Add a **first user**
+    - Install **apps** (e.g. : Nextcloud) and test **email**
+    - ???
+    - Get to know YunoHost and **enjoy your server!**
 
 ---
 
-# Let's get to work !
+class: impact
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
+# Closing words
 
 ---
 
-# Let's get to work !
+# Closing words
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
-- **Configure DNS records**
+- To **continue the adventure** in real life:
+    - buy a Raspberry-Pi-like ARM board
+    - buy a VPS online (e.g. from Scaleway, ~2€/month)
 
----
+- YunoHost is **far from perfect!**
+    - Servers are fragile creatures, don't mess too much with them just for fun!
+    - Your server is either a production server or a test server ;)
 
-# Let's get to work !
-
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
-- **Configure DNS records**
-- Add a **first user**
+- **Backups !**
 
 ---
 
-# Let's get to work !
+# Moar documentation !
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
-- **Configure DNS records**
-- Add a **first user**
-- Play with some **apps and email**, get to know YunoHost
+- Install guide : `yunohost.org/install`
+- Admin documentaiton `yunohost.org/admindoc`
+
+.center[
+![](img/doc.png)
+]
 
 ---
 
-# Let's get to work !
+# Contact me for questions!
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
-- **Configure DNS records**
-- Add a **first user**
-- Play with some **apps and email**, get to know YunoHost
-- ???
-- **Enjoy your server!**
+- **Mastodon**: `cybre.space/@aleks`
+- **GitHub**: `github.com/alexAubin`
+- **Matrix**: `@Alekswag:matrix.org`
+
+Find the YunoHost team on :
+
+- **IRC**: `#yunohost` and `#yunohost-dev` on `irc.freenode.org`
+- **Matrix**: `#freenode_#yunohost:matrix.org`
+- **Forum**: `forum.yunohost.org`
+- **Mastodon**: `mastodon.social/@yunohost`
 
 ---
 
-# Let's get to work !
+class: impact
 
-- Each of you will have **a VPS** (already bought them)
-- With a terminal, **connect using SSH** to your server
-- Launch **YunoHost's install script**
-- Access the **YunoHost admin interface** on your server
-- Run the **postinstall**
-   - at this point you'll have to choose a **domain name** (ex: `something.netlib.re`)
-- **Configure DNS records**
-- Add a **first user**
-- Play with some **apps and email**, get to know YunoHost
-- ???
-- **Enjoy your server!**
+# Thank you for attending !
 
-(All of this is also detailed on `yunohost.org/install`
-
+## <3
 
