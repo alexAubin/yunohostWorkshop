@@ -46,7 +46,8 @@ ssh root@11.22.33.44
 # wget https://install.yunohost.org -O install_script
 # chmod +x install_script
 ```
-    - Tip: when a command display nothing and gives you the prompt back (i.e. you can type something after the # symbol) it usually means that your command worked.
+
+Tip: When a command displays nothing and gives you the prompt back (i.e. you can type something after the # symbol) it usually means that your command worked.
 
 1. Now type this command and execute it: 
     - ```
@@ -95,17 +96,16 @@ You can now control your server using this clean interface.
 1. Navigate to `Users` section and click `New user` button.
 
 1. Fill the form with (real or fake) informations
-    - Note that you can trust this service since it's **YOUR SERVER** ! No one's else is getting access to thoses informations. Amazing, right ?
+    - Note that those informations are not accessible by anyone else since they are on **YOUR SERVER** ! You are reclaiming responsibility on them. Amazing, right ?
 
 1. The email address you enter here is **YOUR NEW email address** created using the email software of your yunohost server. So you can choose any email address ending with your domain name (for instance `me@yourdomain.nohost.me`)
     - You can choose a maximal size for the mail box or leave it empty, no to set any limit.
 
 1. At this end, choose a password (or passphrase) for the new user. It's different to the administrator password and it will be used to access the **User Interface** with this new user account.
 
-You should now have one user in the list. Go back to the home section (tiny home icone).
+You should now have one user in the list. Go back to the home section (tiny home icon).
 
-
-## Test to install an app!
+### Install a first web application !
 
 We have to choose an app among the yunohost apps (around a hundred). **Nextcloud** is a popular and officially-supported application.
 
@@ -123,13 +123,64 @@ Tip: By default only official apps are available. If you want to access apps pac
 
 1. Click the blue `user interface` button in the upper right corner (or type in your browser yourdomain.nohost.me/yunohost/sso).
 
-1. Login with the user nickname and password of the preceding step.
+1. Login with the user nickname and password of the preceding section.
 
 1. Your now accessing the user interface of yunohost. All apps installed andaccessible to your user account are shown here as colored squared icons.
 
-1. Click the nextcloud icon. It will redirect you to the path configured during the installation 
+1. Click the Nextcloud icon. It will redirect you to the application path configured during the installation. In our case `yourdomain.nohost.me/nextcloud`.
 
-- 9 - **Test email features**. Either by configuring a desktop mail client like Thunderbird and configuring a new mail account in it (see `https://yunohost.org/email_configure_client`), or install the Rainloop app (a webmail client) on the server. As a goal : try to send and receive emails to other trainees around you !
+1. You can now explore the Nextcloud interface. 
+    - It's a cloud application, somehow similar to GoogleDrive for instance, but respecting your privacy since it's under your control.
+    - Try to upload a file (choose a small one first) using the `+` button.
 
-- 10 - ??? **Explore YunoHost!** If you want to browse the community apps catalog, you can add the community list in Apps > Install > Manage applications lists > Add (the community list). It's also possible to install a Let's Encrypt certificate so that new visitors won't encounter the spooky certificate warning (though keep in mind that there's a rate limit of 20 certificates per period of 7 days shared between all `netlib.re` domains, so only do this if you really need to !). Documentation is available at `https://yunohost.org/admindoc`.
+### Install a SSL certificate (get rid of the spooky warning)
 
+1. Return to the administration interface:
+    - Click the bottom left `Yunohost` button to get back to the user interface.
+    - Then click the `Administration` link in the footer of the page.
+
+1. Navigate to the `Domains` section, click your created domain (something.nohost.me).
+
+1. In the `Operations` section, click the `SSL Certificate` button.
+
+1. Launch the certifiate installation with the `Install a Let's Encrypt certificate` button then confirm with `Ok`.
+
+1. When the installation is finished, reload the page. You browser should now display a closed lock at the left. The SSL connections of your server will now be accepted by any browser or client, ensuring the some level of security for the connexions.
+
+### Send some email
+
+
+1. Send an email to your new user email address (for instance me@yourdomain.nohost.me) using your current email service.
+
+1. To read this message we will need an email client. Go to the administration panel and install the webmail application named `Rainloop` (Follow the same procedure with which you installed Nextcloud before).
+    - Let the default parameter values except for the password.
+    - Choose a different password of the user and admin password.
+
+1. Access this webmail by clicking the newly added Rainloop item in the app list and then follow the URL : https://yourdomain.nohost.me/rainloop/
+
+1. You should see your email incomming in your Inbox.
+
+1. Then send a new email to your usual email address using rainloop.
+    - Click `New`, write some test message and click send.
+
+1. You can then fetch and see this email with your usual email client.
+
+
+
+### Explore YunoHost!
+
+- Add another user and Install some other apps.
+
+- Deny access to the apps for the second user : Apps > Click an app > Click the Access button and allow only the first user. The app won't display in the interface of other users.
+
+- If you want to browse the community apps catalog, you can add the community list in Apps > Install > Manage applications lists > Add (the community list).
+
+- You can buy a domain name you fully control and add it to your server
+
+- Etc.
+
+
+## Resources
+- Documentation is available at `https://yunohost.org/admindoc`.
+- To find answers, the forum is accessible at https://forum.yunohost.org
+- Some following tutorials comming.
