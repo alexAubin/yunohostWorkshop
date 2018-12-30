@@ -196,7 +196,7 @@ class: impact
 
 - Requires **lot of technical knowledge / skills**
 - And takes **hell of a time anyway**
-- Evebody **somewhat reinvents the wheel everyday**
+- Everybody **somewhat reinvents the wheel everyday**
     - read the same READMEs / tutorial and apply "by hand"
     - lack of standardized, accessible environnement
 
@@ -436,7 +436,7 @@ human-readable name <-> IP address
 - (Also stores some technical infos (ex: spam counter-measure stuff))
 - You can:
    - **buy domain names on DNS *registrars* **(ex: Gandi.net)
-   - or get some for free (ex: netlib.re, nohost.me)
+   - or get some for free (ex: nohost.me, netlib.re)
 
 ---
 
