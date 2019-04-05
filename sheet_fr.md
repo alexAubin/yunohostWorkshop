@@ -2,7 +2,7 @@
 
 ## Installer votre premier serveur YunoHost
 
-Lors de cet atelier, nous utilisons serveur fourni gracieusement par Alsace Réseau Neutre (FAI associatif à Strasbourg, arn-fai.net) pour le temps des JDLL ! Dans la vraie vie, il faudrait commencer par commander un serveur chez eux - ou bien acheter un Raspberry Pi ou un serveur virtuel (VPS) en ligne chez des hébergeurs comme Scaleway, OVH, ...
+L`ors de cet atelier, nous utilisons serveur fourni gracieusement par Alsace Réseau Neutre (FAI associatif à Strasbourg, arn-fai.net) pour le temps des JDLL ! Dans la vraie vie, il faudrait commencer par commander un serveur chez eux - ou bien acheter un Raspberry Pi ou un serveur virtuel (VPS) en ligne chez des hébergeurs comme Scaleway, OVH, ...
 
 ### Utiliser SSH pour accéder au serveur
 
@@ -22,7 +22,7 @@ ssh root@11.22.33.44
 
 2. Créer une nouvelle session (de type SSH) avec :
     - `Hôte`: `11.22.33.44` (remplacer par votre adresse IP)
-    - `Utilisateur` : **root** (attention, après la postinstallation il faudra se connecter en tant qu'**admin**)
+    - `Utilisateur` : **root** (attention, si vous souhaitez faire du SSH après la postinstallation il faudra se connecter en tant qu'**admin**)
 
 ### Se logger en SSH
 
@@ -128,7 +128,7 @@ Astuce : Par défaut, seules les applications officielles sont disponibles dans 
     - C'est une application de cloud de fichiers, similaire à GoogleDrive par exemple, mais respectant votre vie privée puisqu'elle est sous votre contrôle.
     - Essayez de télécharger un fichier (choisissez d'abord un petit fichier) en utilisant le bouton "+".
 
-#### Installer un certificat SSL (se débarrasser de l'avertissement de sécurité)
+### Installer un certificat SSL (se débarrasser de l'avertissement de sécurité)
 
 1. Revenez à l'interface d'administration :
     - Cliquez sur le bouton `Yunohost` en bas à gauche pour revenir au portail utilisateur.
@@ -142,7 +142,7 @@ Astuce : Par défaut, seules les applications officielles sont disponibles dans 
 
 1. Lorsque l'installation est terminée, rechargez la page. Votre navigateur devrait maintenant afficher un cadenas vert à gauche de la barre d'adresse. Les nouveaux visiteurs arrivant sur votre serveur n'auront plus d'avertissement de sécurité !
 
-#### Des emails !
+### Des emails !
 
 1. Envoyez un courriel à votre nouvelle adresse courriel (par exemple `moi@votredomaine.nohost.me`) en utilisant votre service de courriel actuel.
 
@@ -160,7 +160,7 @@ Astuce : Par défaut, seules les applications officielles sont disponibles dans 
 1. Vous pouvez alors aller sur votre adresse e-mail habituelle, et votre message devrait apparaître.
 
 
-#### Explorez YunoHost !
+### Explorez YunoHost !
 
 - Ajouter un autre utilisateur et installer d'autres applications.
 
@@ -170,7 +170,7 @@ Astuce : Par défaut, seules les applications officielles sont disponibles dans 
 
 - Etc.
 
-## Ressources, aller plus loins
+## Ressources, aller plus loin
 
 - La documentation est disponible sur `https://yunohost.org/admindoc`.
 - Si vous rencontrez des problèmes ou avez des questions, le forum est accessible sur `https://forum.yunohost.org`
