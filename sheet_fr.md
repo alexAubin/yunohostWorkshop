@@ -2,7 +2,7 @@
 
 ## Installer votre premier serveur YunoHost
 
-L`ors de cet atelier, nous utilisons serveur fourni gracieusement par Alsace Réseau Neutre (FAI associatif à Strasbourg, arn-fai.net) pour le temps des JDLL ! Dans la vraie vie, il faudrait commencer par commander un serveur chez eux - ou bien acheter un Raspberry Pi ou un serveur virtuel (VPS) en ligne chez des hébergeurs comme Scaleway, OVH, ...
+Lors de cet atelier, nous utilisons serveur fourni gracieusement par Alsace Réseau Neutre (FAI associatif à Strasbourg, arn-fai.net) pour le temps des JDLL ! Dans la vraie vie, il faudrait commencer par commander un serveur chez eux - ou bien acheter un Raspberry Pi ou un serveur virtuel (VPS) en ligne chez des hébergeurs comme Scaleway, OVH, ...
 
 ### Utiliser SSH pour accéder au serveur
 
